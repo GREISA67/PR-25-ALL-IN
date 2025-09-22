@@ -1,5 +1,6 @@
 // src/Components/Layout/NavBar.tsx
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false);
@@ -33,27 +34,64 @@ const Navbar: React.FC = () => {
         </button>
 
         {open && (
-          <div className="absolute right-0 mt-3 w-48 bg-white rounded-md shadow-lg py-2 z-50">
-            <a
-              href="#perfil"
-              className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            >
-              Perfil
-            </a>
-            <a
-              href="#config"
-              className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            >
-              Configuración
-            </a>
-            <a
-              href="#logout"
-              className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            >
-              Cerrar Sesión
-            </a>
-          </div>
-        )}
+        <div className="absolute right-0 mt-3 w-56 bg-white rounded-md shadow-lg py-2 z-50">
+          <Link
+            to="/reportList"
+            className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100"
+          >
+            📋 Lista de Reportes
+          </Link>
+          <Link
+            to="/myReports"
+            className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100"
+          >
+            📄 Mis Reportes
+          </Link>
+          <Link
+            to="/report"
+            className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100"
+          >
+            📝 Crear Reporte
+          </Link>
+          <Link
+            to="/profile"
+            className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100"
+          >
+            👤 Mi Cuenta
+          </Link>
+          <Link
+            to="/validationReports"
+            className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100"
+          >
+            📋 Validación de Reportes
+          </Link>
+          <Link
+            to="/dashboard"
+            className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100"
+          >
+            📊 Dashboard
+          </Link>
+          <Link
+            to="/categories"
+            className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100"
+          >
+            🗂 Categorías
+          </Link>
+          <Link
+            to="/" 
+            className="block px-5 py-2 text-sm text-red-600 hover:bg-gray-100 font-semibold"
+          >
+            ↩️ Cerrar Sesión
+          </Link>
+          <Link
+            to="/login" 
+            className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100"
+          >
+            ↩️ Iniciar Sesión
+          </Link>
+        </div>
+      )}
+
       </div>
     </nav>
   );

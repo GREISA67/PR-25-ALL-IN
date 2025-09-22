@@ -3,9 +3,7 @@ import React from "react";
 const Register: React.FC = () => {
   return (
     <div className="flex items-center justify-center h-screen bg-gradient-to-br from-[#0b0f2e] via-[#0d1b4c] to-[#0a2c77]">
-      {/* Card */}
       <div className="bg-white rounded-2xl shadow-xl p-10 w-96 flex flex-col items-center">
-        {/* Icono */}
         <div className="w-16 h-16 rounded-full border-2 border-[#0d3c7a] flex items-center justify-center mb-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -23,10 +21,8 @@ const Register: React.FC = () => {
           </svg>
         </div>
 
-        {/* Título */}
         <h2 className="text-2xl font-bold text-gray-800 mb-6">Regístrate</h2>
 
-        {/* Formulario */}
         <form className="w-full space-y-4">
           <input
             type="text"
@@ -49,7 +45,6 @@ const Register: React.FC = () => {
             className="w-full px-4 py-2 border rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#2196f3]"
           />
 
-          {/* Botón */}
           <button
             type="submit"
             className="w-full py-2 rounded-lg text-white font-semibold bg-gradient-to-r from-[#0d3c7a] to-[#2196f3] hover:opacity-90 transition"
@@ -58,7 +53,6 @@ const Register: React.FC = () => {
           </button>
         </form>
 
-        {/* Enlace */}
         <p className="mt-6 text-sm text-gray-600">
           ¿Ya tienes cuenta?{" "}
           <a href="/login" className="font-semibold text-[#0d3c7a] hover:underline">
